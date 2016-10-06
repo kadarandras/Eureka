@@ -76,14 +76,14 @@ public struct ValidationOptions : OptionSet {
 }
 
 
-internal struct ValidationRuleHelper<T: Equatable> {
+public struct ValidationRuleHelper<T: Equatable> {
     let validateFn: ((T?) -> ValidationError?)
     let rule: BaseRuleType
 }
 
 public struct RuleSet<T: Equatable> {
     
-    internal var rules: [ValidationRuleHelper<T>] = []
+    public var rules: [ValidationRuleHelper<T>] = []
     
     public init(){}
     
