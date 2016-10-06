@@ -77,8 +77,8 @@ public struct ValidationOptions : OptionSet {
 
 
 public struct ValidationRuleHelper<T: Equatable> {
-    let validateFn: ((T?) -> ValidationError?)
-    let rule: BaseRuleType
+    public let validateFn: ((T?) -> ValidationError?)
+    public let rule: BaseRuleType
 }
 
 public struct RuleSet<T: Equatable> {
